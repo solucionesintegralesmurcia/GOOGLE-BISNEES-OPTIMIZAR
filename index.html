@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Optimizador Google Business Pro</title>
-  <meta name="description" content="Herramienta para generar una optimización completa de Google Business Profile con descripción, servicios, reseñas, publicaciones, fotos y estrategia local." />
+  <meta name="description" content="Herramienta profesional para auditar y optimizar fichas de Google Business Profile." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,11 +13,10 @@
 <body>
   <header class="hero">
     <div class="hero-content">
-      <span class="badge">Herramienta local SEO</span>
+      <span class="badge">Herramienta Local SEO</span>
       <h1>Optimizador Google Business Pro</h1>
       <p>
-        Genera automáticamente todo lo necesario para optimizar una ficha de Google Business:
-        descripción, servicios, publicaciones, reseñas, preguntas frecuentes, fotos y estrategia local.
+        Audita una ficha, genera una puntuación, detecta prioridades y crea todo el contenido necesario para optimizar Google Business.
       </p>
     </div>
   </header>
@@ -25,7 +24,7 @@
   <main class="main">
     <section class="card">
       <h2>Datos del negocio</h2>
-      <p class="section-text">Rellena los datos principales y genera una optimización completa lista para copiar.</p>
+      <p class="section-text">Rellena los datos y genera un informe completo para optimizar o vender el servicio.</p>
 
       <form id="businessForm" class="form-grid">
         <div class="field">
@@ -75,8 +74,13 @@
         </div>
 
         <div class="field">
-          <label>WhatsApp</label>
+          <label>WhatsApp del negocio</label>
           <input type="text" id="whatsapp" placeholder="Ej: 34639000000">
+        </div>
+
+        <div class="field">
+          <label>Tu WhatsApp para vender el servicio</label>
+          <input type="text" id="whatsappVenta" placeholder="Ej: 34639311111">
         </div>
 
         <div class="field">
@@ -128,6 +132,11 @@
         </div>
 
         <div class="field">
+          <label>Publicaciones al mes</label>
+          <input type="number" id="publicaciones" placeholder="Ej: 2">
+        </div>
+
+        <div class="field">
           <label>Objetivo principal</label>
           <select id="objetivo">
             <option value="WhatsApp">WhatsApp</option>
@@ -158,13 +167,14 @@
     <section id="resultadoSection" class="card result-card hidden">
       <div class="result-header">
         <div>
-          <h2>Resultado generado</h2>
-          <p class="section-text">Informe completo listo para copiar, imprimir o guardar como PDF.</p>
+          <h2>Informe generado</h2>
+          <p class="section-text">Auditoría, optimización, plan de acción y propuesta comercial.</p>
         </div>
 
         <div class="result-buttons">
           <button id="copiarBtn" class="btn primary">Copiar resultado</button>
-          <button id="pdfBtn" class="btn secondary">Descargar PDF</button>
+          <button id="pdfBtn" class="btn secondary">Guardar PDF</button>
+          <a id="whatsappBtn" class="btn whatsapp hidden" target="_blank" rel="noopener">Enviar por WhatsApp</a>
         </div>
       </div>
 
@@ -173,7 +183,7 @@
   </main>
 
   <footer class="footer">
-    <p>Optimizador Google Business Pro · Herramienta para captar más clientes locales</p>
+    <p>Optimizador Google Business Pro · Herramienta para vender servicios locales</p>
   </footer>
 
   <script src="script.js"></script>
